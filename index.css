@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(238, 197, 227);
+    transition: background-color 0.3s ease; /* Makes the switch look smooth */
+    padding: 20px 40px; /* Adds space on the sides so text doesn't touch the screen edge */
+    max-width: 900px;   /* Keeps the text from stretching too wide on big screens */
+    margin: 0% auto;
+    padding: 20px 10% 40px 10%; /* Adds 10% space on the left and right */
+}
+img {
+    border: 5px solid white; /* The border*/
+    border-radius: 12px;     /* Smooths the corners slightly */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Adds a subtle shadow behind it */
+    margin-top: 10px;
+}
+/*.dark-mode section in CSS */
+.dark-mode img {
+    border: 3px solid white;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Subtle glow */
+}
+
+/* This is the class JS will add/remove */
+.dark-mode {
+    background-color: #1a1a1a !important; 
+    color: white !important;
+}
+
+ /*headings also change color so they don't disappear */
+.dark-mode h1, .dark-mode h2 {
+    color: #c23cb2 !important;
+}
+
+h1 {
+    color: rgb(116, 65, 163);
+    text-align: center;
+    font-weight: 800;
+}
+
+h2{
+    color: rgb(50, 50, 167);
+    margin-top: 40px; /* Adds space above every heading */
+    margin-bottom: 15px;
+}
+
+#connect a {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+#connect a:hover {
+    opacity: 0.8;
+    transform: scale(1.05); /* Slightly grows when you hover over it */
+}
+#theme-toggle {
+    /* Shape and Spacing */
+    padding: 12px 24px;
+    border-radius: 5px; 
+    border: none;
+    
+    /* Colors - using a gradient that matches your H1 color */
+    background: linear-gradient(135deg, rgb(116, 65, 163), rgb(114, 114, 205));
+    color: white;
+    
+    /* Typography */
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    
+    /* Effects */
+    box-shadow: 0 4px 15px rgba(116, 65, 163, 0.3);
+    transition: all 0.3s ease; /* This makes the hover look smooth */
+    margin-bottom: 20px;
+}
+
+/* What happens when you put your mouse over it */
+#theme-toggle:hover {
+    transform: translateY(-2px); /* Moves it up slightly */
+    box-shadow: 0 6px 20px rgba(116, 65, 163, 0.4);
+    filter: brightness(1.1); /* Makes it glow slightly */
+}
+
+/* What happens when you click it */
+#theme-toggle:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(116, 65, 163, 0.2);
+}
+.dark-mode #theme-toggle {
+    background: linear-gradient(135deg, #8b28c16e, #b51698); /* Sunset yellow for dark mode */
+    color: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(241, 196, 15, 0.3);
+}
